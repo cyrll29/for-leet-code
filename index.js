@@ -27,3 +27,16 @@ const romanToInt = (s) => {
 
     return res + roman[s[s.length - 1]]; 
 }
+
+const removeDuplicate = (arr) => {
+    let i = 1; // Pivot
+
+    for(let j = 1; j < arr.length; j++) {
+        if(nums[j] !== nums[i + 1]) {
+            nums[i] = nums[j];
+            i++;
+        }
+    }
+
+    return i;
+}
