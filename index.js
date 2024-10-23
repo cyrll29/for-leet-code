@@ -64,5 +64,3 @@ const strStr = (haystack, needle) => {
 
     return int;
 }
-
-strStr("leetcode", "leet");
