@@ -40,3 +40,14 @@ const removeDuplicate = (arr) => {
 
     return i;
 }
+
+const removeElement = (nums, val) => {
+    for(let i = 0; i < nums.length; i++) {
+        if(nums[i] === val) {
+            nums.splice(i, 1); // Splice for removing specific item in array. It takes 2 parameters, index and how many should be removed
+            i--;
+        }
+    }
+
+    return nums;
+}
