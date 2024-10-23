@@ -51,3 +51,18 @@ const removeElement = (nums, val) => {
 
     return nums;
 }
+
+const strStr = (haystack, needle) => {
+    let int = -1;
+    for(let i = 0; i < haystack.length; i++) {
+        let sliced = haystack.substr(i, needle.length); // Extract a substring then compare the extracted string to the needle
+        if (sliced === needle) {
+            int = i;
+            break;
+        }
+    }
+
+    return int;
+}
+
+strStr("leetcode", "leet");
