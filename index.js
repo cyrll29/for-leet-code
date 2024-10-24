@@ -80,3 +80,8 @@ const searchInsert = (nums, target) => {
 
     return result;
 }
+
+const lengthOfLastWord = (s) => {
+    const arr = s.trim().split(' ');
+    return arr[arr.length - 1].length;
+}
