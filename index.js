@@ -120,3 +120,27 @@ const merge = (nums1, m, nums2, n) => {
         right--;
     }    
 }
+
+const getOneBits = (decimal) => {
+    let binary = '';
+    let res = [0];
+
+    if(decimal === 0) return;
+
+    while(decimal > 0) {
+        binary = (decimal % 2) + binary;
+        decimal = Math.floor(decimal / 2);
+    }
+
+    for (let i = 0; i < binary.length; i++) {
+        if(binary[i] === '1') {
+            res[0]++;
+            res.push(i + 1);
+        } else {
+            continue;
+        }
+    }
+
+    return res;
+}
+
