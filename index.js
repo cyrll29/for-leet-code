@@ -188,3 +188,24 @@ const majorityElement = (nums) => {
     }
     return res;
 }
+
+const factorial = (k) => {
+    let product = BigInt(1);
+    for(let i = 2; i <= k; i++) {
+        product *= BigInt(i);
+    }
+    let newProduct = product.toString();
+    let res = 0;
+
+    for(let i = 1; i < newProduct.length; i++) {
+        if(newProduct[newProduct.length - i] === '0') {
+            res += 1;
+        } else {
+            return res;
+        }
+    }
+
+    return res;
+}
+
+console.log(factorial(30))
