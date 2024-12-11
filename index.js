@@ -223,3 +223,23 @@ const maxProfit = (prices) => {
     return profit;
 }
 
+const maxProfitTwo = (prices) => {
+    let buyPrice = prices[0];
+    let profit = 0;
+
+    for(let i = 1; i < prices.length; i++) {
+        if(prices[i] < prices[i - 1]) {
+            buyPrice = prices[i];
+            continue;
+        }
+        if(prices[i] > prices[i - 1]) {
+            profit += (prices[i] - prices[i - 1]);
+        }
+
+        console.log(profit)
+    }
+}
+const arr = [6, 1, 3, 2, 4, 7];
+maxProfitTwo(arr)
+
+
