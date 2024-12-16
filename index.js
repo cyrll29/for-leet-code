@@ -276,15 +276,32 @@ const plusMinus = (arr) => {
             res['negative']++;
         }
     }
-    console.log(Object.keys(res).length)
 
     for(let key in res) {
-        console.log(key + ": " + res[key])
         console.log(res[key]/arr.length)
     }
 }
 
-plusMinus([1, 1, 0, -1, -1]);
+const birthdayCakeCandles = (candles) => {
+    const sortedArr = candles.sort((a, b) => a - b);
+    let result = 0;
+    console.log(sortedArr);
+
+    for(let i = sortedArr.length - 1; i > 0; i--) {
+        let highestNum = sortedArr[sortedArr.length - 1];
+        if(sortedArr[i] == highestNum) {
+            result++;
+        } else {
+            break;
+        }
+    }
+
+    console.log(result)
+}
+
+const arr = [3, 7, 1, 9, 5, 2, 8, 6, 4, 10];
+
+birthdayCakeCandles(arr);
 
 
 
