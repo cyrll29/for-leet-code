@@ -238,8 +238,27 @@ const maxProfitTwo = (prices) => {
 
         console.log(profit)
     }
+
+    return profit;
 }
-const arr = [6, 1, 3, 2, 4, 7];
-maxProfitTwo(arr)
+
+function diagonalDifference(arr) {
+    // Write your code here
+    let firstNum = 0;
+    let secondNum = 0;
+    let pseudoNum = arr.length - 1;
+    
+    for(let i = 0; i < arr.length; i++) {
+        firstNum += arr[i][i];
+    }
+
+    for(let i = 0; i < arr.length; i++) {
+        secondNum += arr[i][pseudoNum]
+        pseudoNum--
+    }
+
+    return Math.abs(firstNum - secondNum);
+}
+
 
 
